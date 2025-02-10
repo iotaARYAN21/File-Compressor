@@ -1,0 +1,5 @@
+To rename a folder in Bash, you can use the mv command. For example, to rename a directory from old-name to new-name, you would use the command mv old-name new-name. This command will not delete the contents of the directory, so you won't lose any files by renaming it.
+
+If you need to rename directories based on specific criteria, such as converting all directory names to lowercase, you can use the rename command. For instance, to convert all directory names in the current directory to lowercase, you would use rename 'y/A-Z/a-z/' *.
+
+For renaming directories that are spread across different subdirectories, you can combine the find command with mv. For example, to rename all directories named oldname to newname within the current directory and its subdirectories, you can use find . -type d -name 'oldname' -exec mv {} newname \;.
